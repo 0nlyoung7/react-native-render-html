@@ -35,6 +35,7 @@ export default class HTML extends PureComponent {
         containerStyle: ViewPropTypes ? ViewPropTypes.style : View.propTypes.style,
         customWrapper: PropTypes.func,
         onLinkPress: PropTypes.func,
+        onImagePress: PropTypes.func,
         onParsed: PropTypes.func,
         imagesMaxWidth: PropTypes.number,
         staticContentMaxWidth: PropTypes.number,
