@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Image, View, Text } from 'react-native';
+import { CachedImage } from 'react-native-cached-image';
 import PropTypes from 'prop-types';
 
 export default class HTMLImage extends PureComponent {
@@ -99,9 +100,10 @@ export default class HTMLImage extends PureComponent {
 
     validImage (source, style, props = {}) {
         return (
-            <Image
+            <CachedImage
               source={source}
-              style={[style, { width: this.state.width, height: this.state.height, resizeMode: 'cover' }]}
+              resizeMode={'cover'}
+              style={[style, { width: this.state.width, height: this.state.height }]}
               {...props}
             />
         );
